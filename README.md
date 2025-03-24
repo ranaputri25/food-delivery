@@ -17,4 +17,12 @@ This project focuses on predicting the delivery time of food orders based on var
 - Scikit-learn / XGBoost
 - Matplotlib / Seaborn (for EDA)
 
-## 🚀 How to Run
+## 🚀 Steps 
+1. Data preprocessing
+   a. Assigning appropriate data types to each column
+   b. Handling missing values. For numerical variables, replaced with median or random values based on the distribution. For categorical variables, fill in with modes.
+2. Feature Engineering
+   a. Calculate the distance between restaurant and delivery placed location
+   b. Creating other non-datetime variables to capture the information from the time order variable
+   c. Correlation analysis to evaluate the correlation between the dependent variables and target variable. For numerical variable, use the Pearson Correlation while for          categorical variables used one-way ANOVA. Eliminating unnecessary variables with no significant correlations
+3. Model Building with XGBoost, built a regression model using XGBoost using Cross Validation to search for the best combination of parameters possible resulting in the highest R2 possible.
